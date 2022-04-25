@@ -1,4 +1,4 @@
-import { add } from './addFunc.js';
+import { add } from './addition.js';
 import chai from 'chai';
 const expect = chai.expect;
 
