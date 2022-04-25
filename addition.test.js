@@ -8,4 +8,10 @@ describe('Test suite for add function', ()=>{
 		expect(response).to.be.equal('invalid input');
 		done();
 	});
+
+	it('input empty string,should return 0',(done)=>{
+		const response = add('');
+		expect(response).to.be.equal(0);
+		done();
+	});
 });
