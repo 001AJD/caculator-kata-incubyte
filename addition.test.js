@@ -26,4 +26,16 @@ describe('Test suite for add function', ()=>{
 		expect(response).to.be.equal(3);
 		done();
 	});
+
+	it('input comma separated string of 2 numbers, should return sum', (done) => {
+		const response = add('1,2,3');
+		expect(response).to.be.equal(6);
+		done();
+	});
+
+	it('should handle new line character and return sum of n numbers', (done)=>{
+		const response = add('10,10\n10,10');
+		expect(response).to.be.equal(40);
+		done();
+	});
 });
