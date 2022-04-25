@@ -1,10 +1,9 @@
 
 # calculator-kata-incubyte
-
+***
 + **npm test** : command to run test cases 
 + **npm start** : command to run app
 
-***
 
 ## File description
 
