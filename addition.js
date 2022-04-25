@@ -2,6 +2,10 @@ const convertToArray = value => {
 	return value.split(',');
 };
 
+const replaceNewline = value => {
+	return value.replaceAll('\n',',');
+};
+
 const summation = numberArray => {
 	let sum = 0;
 	numberArray.forEach(element => {
@@ -22,7 +26,7 @@ const add = number => {
 	{
 		return 0;
 	}
-	const numberArray = convertToArray(number);
+	const numberArray = convertToArray(replaceNewline(number));
 
 	// return same number if only 1 number is present in array
 	if(numberArray.length === 1)
