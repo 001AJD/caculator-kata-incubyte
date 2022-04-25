@@ -38,4 +38,10 @@ describe('Test suite for add function', ()=>{
 		expect(response).to.be.equal(40);
 		done();
 	});
+
+	it('should handle new line character with custom delimiter and return sum of n numbers', (done)=>{
+		const response = add('//:\n10:10:10:10');
+		expect(response).to.be.equal(40);
+		done();
+	});
 });
