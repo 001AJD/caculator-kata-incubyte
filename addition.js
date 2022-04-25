@@ -3,9 +3,25 @@ const replaceNewline = value => {
 	return value.replaceAll('\n',',');
 };
 
+const checkNegativeNumbers = numberArray => {
+	let negativeNumbers = [];
+		numberArray.forEach(element => {
+			if(parseInt(element) < 0)
+			{
+				negativeNumbers.push(element);
+			}
+		});
+		if(negativeNumbers.length > 0)
+		{
+			// throw an exception if any negativeNumbers are present
+			throw ('negatives not allowed' + negativeNumbers);
+		}
+};
+
 const summation = numberArray => {
-	// accepts array of string as an input
+	// accepts array of string as an input, returns summation of all integers
 	let sum = 0;
+	checkNegativeNumbers(numberArray);
 	numberArray.forEach(element => {
 		sum += parseInt(element);
 	});
@@ -43,7 +59,13 @@ const add = number => {
 	{
 		return parseInt(numberArray[0]);
 	}
-	return summation(numberArray);
+	try
+	{
+		return summation(numberArray);
+	}
+	catch(e)
+	{
+		return e;
+	}
 };
-
 export { add };
