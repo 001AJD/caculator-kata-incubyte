@@ -15,6 +15,12 @@ describe('Test suite for add function', ()=>{
 		done();
 	});
 
+	it('should return the input', (done) => {
+		const response = add('1');
+		expect(response).to.be.equal(1);
+		done();
+	});
+
 	it('input comma separated string of 2 numbers, should return sum', (done) => {
 		const response = add('1,2');
 		expect(response).to.be.equal(3);
