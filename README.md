@@ -1,10 +1,12 @@
 
 # calculator-kata-incubyte
-## Usage
+## Install Dev Dependencies
 > **npm i --save-dev**
 
+## Run tests
 > **npm test** 
 
+## Run app
 > **npm start**
 
 ## File description
