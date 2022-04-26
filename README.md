@@ -1,8 +1,9 @@
 
 # calculator-kata-incubyte
-+ **npm i --save-dev** : command to install dev dependencies
-+ **npm test** : command to run test cases 
-+ **npm start** : command to run app
+## Usage
+> **npm i --save-dev**
+> **npm test** 
+> **npm start**
 
 ## File description
 
