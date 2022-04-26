@@ -2,7 +2,9 @@
 # calculator-kata-incubyte
 ## Usage
 > **npm i --save-dev**
+
 > **npm test** 
+
 > **npm start**
 
 ## File description
