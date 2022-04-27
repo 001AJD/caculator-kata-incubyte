@@ -1,5 +1,6 @@
 
-# calculator-kata-incubyte - (https://blog.incubyte.co/blog/tdd-assessment/)
+# calculator-kata-incubyte - 
+### (https://blog.incubyte.co/blog/tdd-assessment/)
 ## Install Dev Dependencies
 > **npm i --save-dev**
 
