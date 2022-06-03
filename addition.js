@@ -1,5 +1,4 @@
-const replaceNewline = value => {
-	// replace all newline characters with comma
+const replaceNewlineCharacterWithComma = value => {
 	return value.replaceAll('\n',',');
 };
 
@@ -13,7 +12,6 @@ const checkNegativeNumbers = numberArray => {
 		});
 		if(negativeNumbers.length > 0)
 		{
-			// throw an exception if any negativeNumbers are present
 			throw ('negatives not allowed' + negativeNumbers);
 		}
 };
@@ -37,23 +35,19 @@ const extractArray = number => {
 	}
 	else
 	{
-		return replaceNewline(number).split(',');
+		return replaceNewlineCharacterWithComma(number).split(',');
 	}
 };
 
 const add = number => {
-	// return invalid if input type is not string
 	if(typeof number !== 'string')
 	{
 		return 'invalid input'
 	}
-
-	// return 0 if input is empty string
 	if(number === '')
 	{
 		return 0;
 	}
-	// extract array based on input
 	const numberArray = extractArray(number);
 	if(numberArray.length === 1)
 	{
