@@ -26,10 +26,14 @@ const summation = numberArray => {
 	return sum;
 };
 
+const determineDelimiter = (number) => {
+	return number.substring(2,number.indexOf('\n'));
+}
+
 const extractArray = number => {
-	if(number[0] === '/' && number[1] === '/')
+	if(number.startsWith('//'))
 	{
-		const delimiter = number[2];
+		const delimiter = determineDelimiter(number);
 		number = number.substring(4);
 		return number.split(delimiter);
 	}

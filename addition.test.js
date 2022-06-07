@@ -60,4 +60,10 @@ describe('Test suite for add function', ()=>{
 		expect(response).to.be.equal('negatives not allowed-10,-10');		
 		done();
 	});
+	it('should handle delimiter length more than 1', (done)=>{
+		const input = '//::\n10::10::10::10';
+		const response = add(input);
+		expect(response).to.be.equal(40);
+		done();
+	});
 });
