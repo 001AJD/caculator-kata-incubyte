@@ -5,17 +5,17 @@ const replaceNewline = value => {
 
 const checkNegativeNumbers = numberArray => {
 	let negativeNumbers = [];
-		numberArray.forEach(element => {
-			if(parseInt(element) < 0)
-			{
-				negativeNumbers.push(element);
-			}
-		});
-		if(negativeNumbers.length > 0)
+	numberArray.forEach(element => {
+		if(parseInt(element) < 0)
 		{
-			// throw an exception if any negativeNumbers are present
-			throw ('negatives not allowed' + negativeNumbers);
+			negativeNumbers.push(element);
 		}
+	});
+	if(negativeNumbers.length > 0)
+	{
+		// throw an exception if any negativeNumbers are present
+		throw ('negatives not allowed' + negativeNumbers);
+	}
 };
 
 const summation = numberArray => {
@@ -23,9 +23,21 @@ const summation = numberArray => {
 	let sum = 0;
 	checkNegativeNumbers(numberArray);
 	numberArray.forEach(element => {
-		sum += parseInt(element);
+		let num = removeUnderscore(element);
+		sum += parseInt(num);
 	});
 	return sum;
+};
+
+const removeUnderscore  = (num) => {
+	if(num.includes('_'))
+	{
+		return num.replaceAll('_','');
+	}
+	else
+	{
+		return num;
+	}
 };
 
 const determineDelimiter = (number) => {
