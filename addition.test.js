@@ -66,4 +66,10 @@ describe('Test suite for add function', ()=>{
 		expect(response).to.be.equal(40);
 		done();
 	});
+	it('should handle underscores in input number', (done)=>{
+		const input = '//::\n1_00::10_0::10::10';
+		const response = add(input);
+		expect(response).to.be.equal(220);
+		done();
+	});
 });
